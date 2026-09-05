@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Crackers Billing Software
 
-# Run and deploy your AI Studio app
+Modern billing and inventory management software built for crackers businesses.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/2a0c9488-2406-40c2-a1a7-1c7d0266868b
+- GST Billing
+- Invoice Generation
+- Product Management
+- Customer Management
+- Inventory Management
+- Sales Management
+- Sales Reports
+- Business Settings
+- Invoice Printing
+- Responsive Dashboard
+- Firebase Integration
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- React
+- Vite
+- JavaScript
+- Bootstrap
+- Firebase
+- HTML5
+- CSS3
 
+## Screenshots
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Installation
+
+## Environment Variables
+
+## Usage
+
+## Future Improvements
+
+## Author
