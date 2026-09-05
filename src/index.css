@@ -1,0 +1,347 @@
+@import "tailwindcss";
+/* Light, high-contrast application theme */
+body{background:#f1f5f9!important;color:#172033!important}
+#root .bg-slate-950,#root .bg-slate-950\/60{background:#f8fafc!important}
+#root .bg-slate-900,#root .bg-slate-800,#root .bg-slate-800\/50,#root .bg-slate-800\/60{background:#ffffff!important;color:#172033!important}
+#root .border-slate-800,#root .border-slate-700{border-color:#d6deea!important}
+#root .text-white,#root .text-slate-100,#root .text-slate-200{color:#172033!important}
+#root .text-slate-300,#root .text-slate-400,#root .text-slate-500{color:#526174!important}
+#root input,#root select,#root textarea{color:#172033}
+#root input::placeholder,#root textarea::placeholder{color:#8190a5}
+#root .hover\:bg-slate-800:hover{background:#e8eef6!important}
+/* Premium light POS surfaces and restrained orange accents */
+#root{background:#f7f8fa!important}#main-app-header{background:#fff!important;border-color:#e2e8f0!important;color:#172033!important}#main-app-sidebar-desktop,#main-app-sidebar-desktop .bg-slate-900{background:#fff!important;border-color:#e2e8f0!important}#main-app-sidebar-desktop button{color:#475569!important}#main-app-sidebar-desktop button:hover{background:#fff7ed!important;color:#ea580c!important}#main-app-sidebar-desktop button.bg-gradient-to-r{background:#f97316!important;color:#fff!important}
+#billing-view-container{background:#f7f8fa!important;color:#172033!important}#billing-view-container>div{background:#fff!important;border-color:#e2e8f0!important}#billing-view-container input,#billing-view-container select{background:#fff!important;border-color:#cbd5e1!important;color:#172033!important}#billing-view-container input:focus{border-color:#f97316!important;box-shadow:0 0 0 3px rgba(249,115,22,.12)!important}#billing-view-container .bg-slate-950,#billing-view-container .bg-slate-900,#billing-view-container .bg-slate-800{background:#fff!important;color:#172033!important}#billing-view-container .border-slate-700,#billing-view-container .border-slate-800{border-color:#e2e8f0!important}#billing-view-container .text-white,#billing-view-container .text-slate-100,#billing-view-container .text-slate-200{color:#172033!important}#billing-view-container .text-slate-300,#billing-view-container .text-slate-400,#billing-view-container .text-slate-500{color:#64748b!important}#billing-view-container .hover\:bg-slate-800:hover,#billing-view-container .hover\:bg-slate-700:hover{background:#fff7ed!important;color:#ea580c!important}
+#billing-view-container [class*="grid-cols-"]>button{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:16px!important;box-shadow:0 2px 8px rgba(15,23,42,.06)!important;color:#172033!important}#billing-view-container [class*="grid-cols-"]>button:hover{background:#fff7ed!important;border-color:#fdba74!important;box-shadow:0 6px 18px rgba(249,115,22,.1)!important;transform:translateY(-1px)}#billing-view-container .bg-emerald-500\/10,#billing-view-container .bg-emerald-500\/15{background:#ecfdf5!important;color:#059669!important}#billing-view-container .bg-orange-600{background:#f97316!important;color:#fff!important}#billing-view-container .bg-orange-600:hover{background:#ea580c!important}#billing-view-container .bg-rose-600{background:#fef2f2!important;color:#ef4444!important;border:1px solid #fecaca!important}#billing-view-container .bg-rose-600:hover{background:#fee2e2!important}#billing-view-container .text-orange-400,#billing-view-container .text-orange-500{color:#ea580c!important}
+/* Final warm off-white billing palette */
+#billing-view-container,#billing-view-container>div{background:#f4f1eb!important}
+#billing-view-container .bg-slate-950,#billing-view-container .bg-slate-950\/60,#billing-view-container .bg-slate-900,#billing-view-container .bg-slate-800,#billing-view-container .bg-slate-800\/60{background:#fbfaf7!important;color:#172033!important}
+#billing-view-container input,#billing-view-container select,#billing-view-container textarea{background:#fffdf9!important;color:#172033!important;border-color:#d8d2c8!important}
+#billing-view-container input::placeholder{color:#8b8175!important}
+#billing-view-container [class*="grid-cols-"]>button{background:#fffdf9!important;border-color:#ded8ce!important;box-shadow:0 2px 8px rgba(86,65,42,.08)!important}
+#billing-view-container [class*="grid-cols-"]>button:hover{background:#fdf1e5!important;border-color:#f3a15f!important;box-shadow:0 6px 18px rgba(180,91,28,.12)!important}
+#billing-view-container .text-slate-300,#billing-view-container .text-slate-400,#billing-view-container .text-slate-500{color:#746b61!important}
+/* Final neutral professional retail POS theme */
+body{background:#f5f6f8!important;color:#1e293b!important}
+#root{background:#f5f6f8!important}
+#main-app-header{background:#fff!important;border-color:#e2e8f0!important;color:#1e293b!important}
+#main-app-sidebar-desktop,#main-app-sidebar-desktop .bg-slate-900{background:#fff!important;border-color:#e2e8f0!important}
+#main-app-sidebar-desktop button{background:transparent!important;color:#475569!important;box-shadow:none!important}
+#main-app-sidebar-desktop button:hover{background:#f8fafc!important;color:#1e293b!important}
+#main-app-sidebar-desktop button.bg-gradient-to-r{background:#ea580c!important;color:#fff!important}
+#billing-view-container,#billing-view-container>div{background:#f5f6f8!important;color:#1e293b!important}
+#billing-view-container>div{background:#fff!important;border-color:#e2e8f0!important}
+#billing-view-container input,#billing-view-container select,#billing-view-container textarea{background:#fff!important;color:#1e293b!important;border-color:#cbd5e1!important}
+#billing-view-container input:focus{border-color:#ea580c!important;box-shadow:0 0 0 3px rgba(234,88,12,.1)!important}
+#billing-view-container input::placeholder{color:#94a3b8!important}
+#billing-view-container .bg-slate-950,#billing-view-container .bg-slate-950\/60,#billing-view-container .bg-slate-900,#billing-view-container .bg-slate-800,#billing-view-container .bg-slate-800\/60{background:#fff!important;color:#1e293b!important}
+#billing-view-container .border-slate-700,#billing-view-container .border-slate-800{border-color:#e2e8f0!important}
+#billing-view-container .text-white,#billing-view-container .text-slate-100,#billing-view-container .text-slate-200{color:#1e293b!important}
+#billing-view-container .text-slate-300,#billing-view-container .text-slate-400,#billing-view-container .text-slate-500{color:#64748b!important}
+#billing-view-container [class*="grid-cols-"]>button{background:#fff!important;border:1px solid #e2e8f0!important;border-radius:10px!important;box-shadow:0 1px 3px rgba(15,23,42,.05)!important;color:#1e293b!important}
+#billing-view-container [class*="grid-cols-"]>button:hover{background:#fafafa!important;border-color:#cbd5e1!important;box-shadow:0 4px 10px rgba(15,23,42,.08)!important;transform:translateY(-1px)}
+#billing-view-container [class*="grid-cols-"]>button[class*="bg-orange-950"]{background:#fff7ed!important;border:2px solid #ea580c!important}
+#billing-view-container .bg-emerald-500\/10,#billing-view-container .bg-emerald-500\/15{background:#f0fdf4!important;color:#15803d!important;border-color:#bbf7d0!important}
+#billing-view-container .bg-orange-600{background:#ea580c!important;color:#fff!important}
+#billing-view-container .bg-orange-600:hover{background:#c2410c!important}
+#billing-view-container .bg-rose-600{background:#fff7f7!important;color:#b91c1c!important;border:1px solid #fecaca!important}
+#billing-view-container .bg-rose-600:hover{background:#fef2f2!important}
+#billing-view-container .text-orange-400,#billing-view-container .text-orange-500{color:#ea580c!important}
+#billing-view-container .text-emerald-400{color:#15803d!important}
+#billing-view-container .shadow-2xl,#billing-view-container .shadow-lg{box-shadow:0 1px 3px rgba(15,23,42,.05)!important}
+/* Final cleanup: remove remaining dark utility surfaces from billing */
+#billing-view-container [class*="bg-slate-"]{background:#fff!important;color:#1e293b!important}
+#billing-view-container [class*="bg-slate-"]:hover{background:#f8fafc!important;color:#1e293b!important}
+#billing-view-container [class*="bg-orange-"]{background:#ea580c!important;color:#fff!important}
+#billing-view-container [class*="bg-orange-"]:hover{background:#c2410c!important;color:#fff!important}
+#billing-view-container [class*="bg-emerald-"]{background:#f0fdf4!important;color:#15803d!important}
+#billing-view-container [class*="bg-rose-"]{background:#fff7f7!important;color:#b91c1c!important}
+#billing-view-container .text-white{color:#1e293b!important}
+#billing-view-container .bg-orange-600 .text-white,#billing-view-container [class*="bg-orange-"] .text-white{color:#fff!important}
+#billing-view-container [class*="border-slate-"]{border-color:#e2e8f0!important}
+/* Admin management forms */
+@media (max-width:1023px){
+  #mobile-action-buttons{position:sticky!important;left:auto!important;right:auto!important;bottom:64px!important;z-index:20!important;background:#fff!important;border-top:1px solid #e2e8f0!important;padding:10px 0!important;box-shadow:0 -3px 10px rgba(15,23,42,.12)!important}
+  #mobile-action-buttons button{min-height:46px!important;font-size:12px!important;color:#1e293b!important;background:#fff!important;border:1px solid #e2e8f0!important}
+  #mobile-action-buttons #btn-complete-sale{background:#ea580c!important;color:#fff!important;border-color:#ea580c!important}
+  #billing-view-container [class*="pb-20"]{padding-bottom:0!important}
+  #billing-view-container{min-height:0!important}
+  #billing-view-container>div{min-height:0!important}
+  #billing-view-container .lg\:hidden.absolute.bottom-2{bottom:-1px!important;background:#fff!important;border-color:#e2e8f0!important;color:#1e293b!important;box-shadow:0 1px 3px rgba(15,23,42,.08)!important}
+  #billing-view-container [class*="grid-cols-"]>button h4{font-size:14px!important;line-height:1.25!important;font-weight:700!important;color:#1e293b!important}
+  #billing-view-container [class*="grid-cols-"]>button p{font-size:12px!important;color:#64748b!important}
+  #billing-view-container [class*="grid-cols-"]>button span.text-white{color:#1e293b!important;font-size:14px!important;font-weight:800!important}
+  #billing-view-container [class*="grid-cols-"]>button .text-orange-400{font-size:12px!important;font-weight:700!important}
+  #billing-view-container [class*="grid-cols-"]>button .text-slate-400{font-size:11px!important}
+  #billing-view-container .lg\:hidden{scrollbar-width:none}
+}
+.admin-page{height:100%;overflow:auto;padding:32px;background:#020617;color:#e2e8f0}.admin-card{max-width:1100px;margin:auto;padding:30px;border:1px solid #1e293b;border-radius:22px;background:#0f172a;box-shadow:0 20px 60px #0005}.admin-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1e293b;padding-bottom:22px;margin-bottom:26px}.admin-title{display:flex;gap:15px;align-items:center}.admin-title span{display:grid;place-items:center;padding:13px;border-radius:14px;background:#f973161c;color:#fb923c}.admin-title h1{font-size:24px;font-weight:800;margin:0}.admin-title p{margin:4px 0 0;color:#94a3b8;font-size:13px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.form-grid .wide{grid-column:1/-1}.admin-card label{display:flex;flex-direction:column;gap:8px;color:#cbd5e1;font-size:13px;font-weight:700}.admin-input{width:100%;border:1px solid #334155;border-radius:11px;background:#020617;color:#f8fafc;padding:13px 14px;outline:none;font:inherit;font-weight:500;transition:.2s}.admin-input:focus{border-color:#f97316;box-shadow:0 0 0 3px #f9731625}.admin-input.muted{color:#64748b;background:#1e293b}.admin-input textarea,textarea.admin-input{min-height:90px;resize:vertical}.save-btn{display:flex;align-items:center;gap:8px;margin-top:24px;border:0;border-radius:11px;background:#ea580c;color:white;padding:13px 22px;font-weight:800;cursor:pointer}.icon-btn{border:0;background:transparent;color:#94a3b8;cursor:pointer}.permission-box{margin-top:22px;border:1px solid #334155;border-radius:14px;padding:18px;background:#020617}.permission-box h3{margin:0 0 14px;font-size:14px}.permission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.permission-grid label{display:flex;flex-direction:row;align-items:center;gap:9px;font-weight:500}.permission-grid input{accent-color:#f97316}.permission-box small{display:block;margin-top:17px;color:#fbbf24;font-size:11px}.success-msg{color:#34d399;font-size:13px}.row-list{display:grid;gap:10px;margin-top:30px}.data-row{display:flex;align-items:center;justify-content:space-between;border:1px solid #1e293b;border-radius:12px;background:#111c31;padding:14px 16px}.data-row div{display:flex;align-items:center;gap:14px}.data-row span{font-weight:700}.data-row em{color:#94a3b8;font-size:12px;font-style:normal}.data-row aside{display:flex;gap:7px}.data-row button{border:0;border-radius:8px;background:#1e293b;color:#93c5fd;padding:8px;cursor:pointer}.data-row button:last-child{color:#fda4af}@media(max-width:700px){.admin-page{padding:15px}.admin-card{padding:18px}.form-grid,.permission-grid{grid-template-columns:1fr}.form-grid .wide{grid-column:auto}.data-row div{display:grid;gap:3px}}
+
+/* Blue and white POS theme */
+#billing-view-container,
+#billing-view-container > div { background:#f4f7fb!important; color:#17324d!important }
+#billing-view-container .bg-orange-600,
+#billing-view-container [class*="bg-orange-"] { background:#1769aa!important; color:#fff!important }
+#billing-view-container .bg-orange-600:hover,
+#billing-view-container [class*="bg-orange-"]:hover { background:#12558b!important; color:#fff!important }
+#billing-view-container .text-orange-400,
+#billing-view-container .text-orange-500 { color:#1769aa!important }
+#billing-view-container #payment-section .grid button {
+  background:#fff!important;
+  color:#245271!important;
+  border:1px solid #b8cde0!important;
+  box-shadow:0 1px 3px rgba(23,105,170,.12)!important;
+}
+#billing-view-container #payment-section .grid button[class*="bg-emerald-600"],
+#billing-view-container #payment-section .grid button[class*="bg-blue-600"],
+#billing-view-container #payment-section .grid button[class*="bg-amber-600"],
+#billing-view-container #payment-section .grid button[class*="bg-orange-600"] {
+  background:#1769aa!important;
+  color:#fff!important;
+  border-color:#1769aa!important;
+  box-shadow:0 2px 7px rgba(23,105,170,.3)!important;
+}
+#billing-view-container #payment-section .grid button:hover { background:#e8f2fa!important; color:#12558b!important }
+#billing-view-container #payment-section .grid button[class*="bg-emerald-600"]:hover,
+#billing-view-container #payment-section .grid button[class*="bg-blue-600"]:hover,
+#billing-view-container #payment-section .grid button[class*="bg-amber-600"]:hover,
+#billing-view-container #payment-section .grid button[class*="bg-orange-600"]:hover { background:#12558b!important; color:#fff!important }
+#billing-view-container #btn-complete-sale { background:#1769aa!important; border-color:#1769aa!important }
+#billing-view-container #btn-complete-sale:hover { background:#12558b!important }
+
+/* Mobile-first application shell: flat surfaces, touch-safe controls and no
+   orange accents anywhere in the product UI. */
+@media (max-width: 767px) {
+  html, body, #root { width:100%; min-width:0; overflow-x:hidden; }
+  body { background:#f4f7fb!important; }
+  #root { background:#f4f7fb!important; }
+
+  /* Remove the card-inside-card treatment on mobile. Sections remain separated
+     by borders and spacing, while data itself reads like a native list. */
+  main, main > div, main section { min-width:0; max-width:100%; }
+  main .rounded-3xl, main .rounded-2xl { border-radius:12px!important; }
+  main .rounded-3xl { box-shadow:none!important; }
+  main .rounded-3xl > .rounded-2xl,
+  main .rounded-2xl > .rounded-xl { border-radius:8px!important; box-shadow:none!important; }
+  main [class*="shadow-"] { box-shadow:none!important; }
+
+  /* Native-feeling controls: never allow labels or buttons to be clipped. */
+  main button { min-height:44px; max-width:100%; }
+  main input, main select, main textarea { min-height:44px; max-width:100%; }
+  main button span { min-width:0; overflow:hidden; text-overflow:ellipsis; }
+  main [class*="grid-cols-"] { min-width:0; }
+  /* Product catalog is intentionally two columns on phones. */
+  #billing-view-container .grid.grid-cols-2.sm\:grid-cols-3.xl\:grid-cols-4 {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  /* The active mobile tab is the flexible scroll region. */
+  #billing-view-container #mobile-products-panel {
+    flex:1 1 auto!important;
+    height:auto!important;
+    min-height:0!important;
+    overflow:hidden!important;
+  }
+  #billing-view-container #mobile-products-panel > .flex-1 {
+    flex:1 1 auto!important;
+    min-height:0!important;
+    overflow-y:auto!important;
+    padding-bottom:calc(12px + env(safe-area-inset-bottom))!important;
+  }
+  #billing-view-container #mobile-cart-panel {
+    display:flex!important;
+    flex:1 1 auto!important;
+    height:auto!important;
+    min-height:0!important;
+    overflow-y:auto!important;
+    padding-bottom:calc(64px + env(safe-area-inset-bottom))!important;
+  }
+  #billing-view-container #mobile-cart-panel > .flex-1.min-h-0.overflow-y-auto {
+    flex:none!important;
+    height:auto!important;
+    min-height:0!important;
+    overflow:visible!important;
+  }
+  #billing-view-container #mobile-cart-panel > #mobile-action-buttons { position:static!important; }
+  #billing-view-container #mobile-cart-panel > .shrink-0:last-child { position:static!important; }
+  #billing-view-container #payment-section .grid { grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:.5rem!important; }
+  #billing-view-container #payment-section .grid button { min-height:44px!important; }
+  #billing-view-container #mobile-action-buttons { grid-template-columns:repeat(2,minmax(0,1fr))!important; position:static!important; padding:10px 0 0!important; }
+  #billing-view-container #mobile-action-buttons #btn-complete-sale { grid-column:1 / -1!important; min-height:48px!important; }
+  #billing-view-container #mobile-action-buttons #btn-hold-bill,
+  #billing-view-container #mobile-action-buttons #btn-clear-cart { min-height:44px!important; }
+  #billing-view-container #payment-section input { min-width:0!important; width:clamp(5rem,28vw,7rem)!important; }
+
+  /* Keep content above the bottom navigation and respect notched devices. */
+  main { padding-bottom:env(safe-area-inset-bottom); }
+  #billing-view-container { min-height:0!important; }
+  #billing-view-container > div { min-width:0; }
+  #billing-view-container > div[class*="w-full"] { padding-bottom:0!important; }
+  .safe-area-bottom { padding-bottom:max(8px, env(safe-area-inset-bottom)); height:auto!important; min-height:64px; }
+
+  /* Flat blue/white system-wide color tokens for every page. */
+  main [class*="bg-orange-"],
+  header [class*="bg-orange-"],
+  nav [class*="bg-orange-"],
+  [class*="bg-gradient-to-r"],
+  [class*="bg-gradient-to-tr"] { background:#1769aa!important; color:#fff!important; }
+  main [class*="bg-orange-"]:hover,
+  header [class*="bg-orange-"]:hover,
+  nav [class*="bg-orange-"]:hover { background:#12558b!important; color:#fff!important; }
+  main [class*="text-orange-"],
+  header [class*="text-orange-"],
+  nav [class*="text-orange-"] { color:#1769aa!important; }
+  main [class*="border-orange-"],
+  header [class*="border-orange-"],
+  nav [class*="border-orange-"] { border-color:#1769aa!important; }
+
+  /* Replace warm active pills/statuses with the same blue selected language. */
+  main [class*="bg-amber-"], main [class*="bg-emerald-"], main [class*="bg-rose-"] {
+    border-color:#b8cde0!important;
+  }
+  #mobile-action-buttons { bottom:0!important; }
+
+  /* Shared mobile page audit: every non-Billing view owns its vertical scroll. */
+  main { overflow-y:auto!important; overflow-x:hidden!important; }
+  #billing-view-container { overflow:hidden!important; }
+  main > div[id$="-view-root"] {
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    min-height:100%!important;
+    height:auto!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    padding:12px!important;
+    padding-bottom:calc(76px + env(safe-area-inset-bottom))!important;
+  }
+  main > div[id$="-view-root"] > * { min-width:0!important; max-width:100%!important; }
+  main > div[id$="-view-root"] table {
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+    white-space:nowrap!important;
+  }
+  main > div[id$="-view-root"] table th,
+  main > div[id$="-view-root"] table td { white-space:nowrap!important; }
+  main > div[id$="-view-root"] [class*="min-w-["] { min-width:0!important; }
+  main > div[id$="-view-root"] [class*="grid-cols-4"],
+  main > div[id$="-view-root"] [class*="grid-cols-3"] { grid-template-columns:repeat(2,minmax(0,1fr))!important; }
+  main > div[id$="-view-root"] [class*="flex-row"] { flex-wrap:wrap!important; }
+  main > div[id$="-view-root"] .fixed.inset-0 { overflow-y:auto!important; align-items:flex-start!important; padding-top:16px!important; padding-bottom:16px!important; }
+  main > div[id$="-view-root"] .fixed.inset-0 > * { max-width:100%!important; max-height:none!important; }
+}
+
+/* Branch and Staff share the legacy admin class; keep them on the light POS
+   surface at every viewport, not only on phones. */
+.admin-page { background:#f5f7fa!important; color:#172b45!important; }
+.admin-card { background:#fff!important; color:#172b45!important; border-color:#dbe3ec!important; box-shadow:0 1px 3px rgba(15,23,42,.08)!important; }
+.admin-title h1, .admin-card h1, .admin-card h2, .admin-card h3 { color:#172b45!important; }
+.admin-title p, .admin-card p { color:#52657b!important; }
+.admin-card label { color:#52657b!important; }
+.admin-input { background:#fff!important; color:#172b45!important; border-color:#cbd5e1!important; }
+.permission-box { background:#f8fafc!important; border-color:#dbe3ec!important; }
+.data-row { background:#fff!important; border-color:#dbe3ec!important; }
+.save-btn { background:#1769aa!important; color:#fff!important; }
+
+
+/* Reports actions and management screens: mobile-only corrections. */
+@media (max-width: 767px) {
+  #reports-view-root > div:first-child > div:first-child { align-items:stretch!important; }
+  #reports-view-root > div:first-child > div:first-child > div:last-child {
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    width:100%!important;
+    min-width:0!important;
+  }
+  #reports-view-root > div:first-child > div:first-child select,
+  #reports-view-root > div:first-child > div:first-child button { width:100%!important; min-width:0!important; }
+  #reports-view-root > div:first-child > div:first-child button { justify-content:center!important; }
+  #reports-view-root > div:first-child > div:nth-child(2) { min-width:0!important; }
+
+  .admin-page { padding:12px!important; background:#f5f7fa!important; color:#172b45!important; }
+  .admin-card { background:#fff!important; color:#172b45!important; border-color:#dbe3ec!important; box-shadow:0 1px 3px rgba(15,23,42,.08)!important; }
+  .admin-header { padding-bottom:14px!important; margin-bottom:16px!important; }
+  .admin-title h1 { font-size:20px!important; color:#172b45!important; }
+  .admin-title p { color:#52657b!important; }
+  .admin-card label, .admin-card h3 { color:#52657b!important; }
+  .admin-input { background:#fff!important; color:#172b45!important; border-color:#cbd5e1!important; }
+  .permission-box { background:#f8fafc!important; border-color:#dbe3ec!important; }
+  .data-row { background:#fff!important; border-color:#dbe3ec!important; }
+  .data-row aside { flex-shrink:0!important; }
+  .data-row div { min-width:0!important; }
+  .data-row span, .data-row em { overflow:hidden!important; text-overflow:ellipsis!important; white-space:nowrap!important; max-width:45vw!important; }
+  .save-btn { background:#1769aa!important; color:#fff!important; }
+}
+
+@media (max-width: 767px) {
+  #sales-history-root,
+  #billing-view-container {
+    width:100%!important;
+    max-width:100vw!important;
+    min-width:0!important;
+    overflow-x:hidden!important;
+  }
+  #sales-history-root > *,
+  #billing-view-container > * { min-width:0!important; max-width:100%!important; }
+  #sales-history-root input,
+  #sales-history-root select,
+  #sales-history-root button,
+  #billing-view-container input,
+  #billing-view-container select,
+  #billing-view-container button { max-width:100%!important; }
+  #sales-history-root [class*="flex-nowrap"],
+  #billing-view-container [class*="flex-nowrap"] { flex-wrap:wrap!important; }
+  #sales-history-root [class*="min-w-"],
+  #billing-view-container [class*="min-w-"] { min-width:0!important; }
+
+  #dashboard-view-root {
+    height:100%!important;
+    min-height:0!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    padding-bottom:calc(76px + env(safe-area-inset-bottom))!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  #dashboard-view-root > * { min-width:0!important; max-width:100%!important; }
+  #dashboard-view-root > .grid { grid-template-columns:1fr!important; }
+  #dashboard-view-root > [class*="grid-cols-"] { grid-template-columns:1fr!important; }
+
+  #sales-history-root {
+    background:#fff!important;
+    border:1px solid #dbe3ec!important;
+    border-radius:12px!important;
+    padding:0!important;
+    gap:0!important;
+  }
+  #sales-history-root > div:first-child,
+  #sales-history-root > div:nth-child(2) {
+    border-radius:0!important;
+    border-left:0!important;
+    border-right:0!important;
+  }
+  #sales-history-root > div:first-child { border-top:0!important; }
+  #sales-history-root > div:nth-child(2) { border-bottom:0!important; }
+  #sales-history-root > div:nth-child(2) {
+    display:block!important;
+    flex:none!important;
+    min-height:0!important;
+    overflow:visible!important;
+  }
+  #sales-history-root > div:nth-child(2) > .md\:hidden {
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    width:100%!important;
+    overflow:visible!important;
+    min-height:0!important;
+    height:auto!important;
+  }
+  #sales-history-root > div:nth-child(2) > .md\:hidden > div {
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+    flex:0 0 auto!important;
+  }
+}

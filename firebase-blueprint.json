@@ -1,0 +1,107 @@
+{
+  "entities": {
+    "ShopProfile": {
+      "title": "ShopProfile",
+      "description": "Store contact, logo and bill header/footer configuration for fireworks retail store",
+      "type": "object",
+      "properties": {
+        "shopName": { "type": "string", "maxLength": 100 },
+        "tagline": { "type": "string", "maxLength": 150 },
+        "address": { "type": "string", "maxLength": 250 },
+        "city": { "type": "string", "maxLength": 80 },
+        "state": { "type": "string", "maxLength": 80 },
+        "pincode": { "type": "string", "maxLength": 20 },
+        "phone": { "type": "string", "maxLength": 25 },
+        "whatsappNumber": { "type": "string", "maxLength": 25 },
+        "email": { "type": "string", "maxLength": 100 },
+        "footerMessage": { "type": "string", "maxLength": 200 }
+      },
+      "required": ["shopName", "phone", "address", "city"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Fireworks product master item",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 150 },
+        "shortName": { "type": "string", "maxLength": 60 },
+        "barcode": { "type": "string", "maxLength": 60 },
+        "categoryId": { "type": "string", "maxLength": 50 },
+        "brandId": { "type": "string", "maxLength": 50 },
+        "unit": { "type": "string", "maxLength": 20 },
+        "purchaseRate": { "type": "number" },
+        "sellingRate": { "type": "number" },
+        "mrp": { "type": "number" },
+        "currentStock": { "type": "number" },
+        "minimumStockLevel": { "type": "number" },
+        "rackLocation": { "type": "string", "maxLength": 50 },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["name", "categoryId", "sellingRate", "unit"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "Cracker categories like Bombs, Sparklers, Flower Pots",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 80 },
+        "icon": { "type": "string", "maxLength": 50 },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["name", "isActive"]
+    },
+    "Sale": {
+      "title": "Sale",
+      "description": "Retail billing sale invoice without GST",
+      "type": "object",
+      "properties": {
+        "billNumber": { "type": "string", "maxLength": 40 },
+        "invoiceDate": { "type": "string", "maxLength": 40 },
+        "customerId": { "type": "string", "maxLength": 50 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "subtotal": { "type": "number" },
+        "totalDiscount": { "type": "number" },
+        "grandTotal": { "type": "number" },
+        "paidAmount": { "type": "number" },
+        "dueAmount": { "type": "number" },
+        "paymentMethod": { "type": "string", "maxLength": 20 },
+        "status": { "type": "string", "maxLength": 30 }
+      },
+      "required": ["billNumber", "grandTotal", "paymentMethod", "status"]
+    },
+    "Customer": {
+      "title": "Customer",
+      "description": "Retail & wholesale customer records",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 100 },
+        "mobile": { "type": "string", "maxLength": 25 },
+        "currentDue": { "type": "number" },
+        "status": { "type": "string", "maxLength": 20 }
+      },
+      "required": ["name", "status"]
+    }
+  },
+  "firestore": {
+    "/shopSettings/{settingId}": {
+      "schema": { "$ref": "#/entities/ShopProfile" },
+      "description": "General shop details and profile settings"
+    },
+    "/products/{productId}": {
+      "schema": { "$ref": "#/entities/Product" },
+      "description": "Master catalog of fireworks and crackers"
+    },
+    "/categories/{categoryId}": {
+      "schema": { "$ref": "#/entities/Category" },
+      "description": "Cracker product categories"
+    },
+    "/customers/{customerId}": {
+      "schema": { "$ref": "#/entities/Customer" },
+      "description": "Customer profiles and credit tracking"
+    },
+    "/sales/{saleId}": {
+      "schema": { "$ref": "#/entities/Sale" },
+      "description": "Sales bills and invoices"
+    }
+  }
+}

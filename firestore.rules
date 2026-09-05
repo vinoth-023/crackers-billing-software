@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function admin() { return signedIn() && (request.auth.token.email == 'admin@kannan.com' || exists(/databases/$(database)/documents/admins/$(request.auth.uid))); }
+    function staff() { return signedIn() && exists(/databases/$(database)/documents/staff/$(request.auth.uid)); }
+    function staffData() { return get(/databases/$(database)/documents/staff/$(request.auth.uid)).data; }
+    function permission(name) { return admin() || (staff() && staffData().active == true && staffData().permissions[name] == true); }
+    function ownBranch() { return admin() || (staff() && resource.data.branchId == staffData().branchId); }
+    function incomingOwnBranch() { return admin() || (staff() && request.resource.data.branchId == staffData().branchId); }
+    function validId(id) { return id is string && id.matches('^[A-Za-z0-9_-]+$'); }
+    match /admins/{uid} { allow read: if signedIn() && request.auth.uid == uid; allow create, update: if admin() && request.auth.uid == uid; }
+    match /staff/{staffId} { allow read: if admin() || (signedIn() && resource.data.uid == request.auth.uid); allow write: if admin(); }
+    match /branches/{id} { allow read, write: if admin() && validId(id); }
+    match /products/{id} { allow read: if permission('products') || permission('billing'); allow write: if permission('products') && validId(id); }
+    match /categories/{id} { allow read: if permission('products') || permission('billing'); allow write: if permission('products'); }
+    match /brands/{id} { allow read: if permission('products') || permission('billing'); allow write: if permission('products'); }
+    match /customers/{id} { allow read, write: if permission('customers') || permission('billing'); }
+    match /suppliers/{id} { allow read, write: if permission('suppliers'); }
+    // Staff records use STFxxx document IDs while their Firebase Auth UID is
+    // stored in the document data. The app already authenticates every user;
+    // allow authenticated bill creation and keep reads restricted by role.
+    match /sales/{id} { allow read: if admin() || (signedIn() && permission('salesHistory')) || (signedIn() && resource.data.cashierId == request.auth.uid); allow create: if permission('billing') && incomingOwnBranch() && request.resource.data.staffId == request.auth.uid && request.resource.data.cashierId == request.auth.uid && validId(id); allow update: if admin(); allow delete: if false; }
+    match /billingCounters/{counterId} {
+      allow read: if admin() || permission('billing');
+      allow create: if admin();
+      allow update: if admin() || (permission('billing') && request.resource.data.nextNumber == resource.data.nextNumber + 1);
+      allow delete: if false;
+    }
+    match /saleItems/{id} { allow read: if admin() || permission('salesHistory'); allow write: if admin() || permission('billing'); }
+    match /stock/{id} { allow read: if admin() || permission('stock') || permission('billing'); allow write: if admin() || permission('stock'); }
+    match /payments/{id} { allow read: if admin() || ownBranch(); allow create: if permission('billing') && incomingOwnBranch(); allow update, delete: if false; }
+    match /settings/emergency { allow read: if signedIn(); allow write: if admin(); }
+    match /{collection}/{id} { allow read: if admin() || (signedIn() && collection == 'settings' && permission('settings')); allow write: if admin() && validId(id); }
+  }
+}

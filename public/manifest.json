@@ -1,0 +1,18 @@
+{
+  "short_name": "Fireworks POS",
+  "name": "Fireworks Shop Billing & Inventory POS",
+  "description": "High-Speed Retail Billing & Inventory Management Software for Fireworks & Crackers Shops",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23ea580c'/><path d='M50 15 L53 38 L75 30 L58 46 L82 58 L57 60 L70 80 L50 68 L30 80 L43 60 L18 58 L42 46 L25 30 L47 38 Z' fill='%23fbbf24'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ea580c",
+  "background_color": "#020617",
+  "orientation": "any"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Fireworks Shop Billing & Inventory",
+  "description": "Fast POS billing, inventory, stock adjustment, purchases, thermal receipt printing, and sales management tailored for fireworks & crackers retail shops.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

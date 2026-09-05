@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "college-136ff"
+  },
+  "targets": {
+    "college-136ff": {
+      "hosting": {
+        "crackers-billing-software": [
+          "crackers-billing-software"
+        ]
+      }
+    }
+  }
+}
