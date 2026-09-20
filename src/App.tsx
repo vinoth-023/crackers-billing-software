@@ -153,7 +153,7 @@ export default function App() {
     <ToastProvider>
       <div className="flex h-screen w-screen bg-slate-950 text-slate-100 font-sans overflow-hidden antialiased select-none">
         {showInstallBanner && installPrompt && (
-          <div className="fixed bottom-20 md:bottom-4 left-3 right-3 md:left-auto md:right-4 md:w-96 z-[60] flex items-center gap-3 rounded-2xl border border-orange-500/40 bg-slate-900 p-3 shadow-2xl shadow-black/40">
+          <div className="fixed bottom-24 md:bottom-4 left-3 right-3 md:left-auto md:right-4 md:w-96 z-[60] flex items-center gap-3 rounded-2xl border border-orange-500/40 bg-slate-900 p-3 shadow-2xl shadow-black/40">
             <div className="rounded-xl bg-orange-500/15 p-2 text-orange-400"><Download className="h-5 w-5" /></div>
             <div className="min-w-0 flex-1"><p className="text-sm font-bold text-white">Install Fireworks POS</p><p className="text-[11px] text-slate-400">Use billing faster like a mobile app.</p></div>
             <button onClick={handleInstallApp} className="rounded-lg bg-orange-600 px-3 py-2 text-xs font-bold text-white">Install</button>

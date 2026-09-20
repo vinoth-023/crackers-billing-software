@@ -146,15 +146,15 @@ export const StockManagementView: React.FC = () => {
   return (
     <div id="stock-view-root" className="p-4 sm:p-6 space-y-4 max-w-7xl mx-auto overflow-y-auto h-full flex flex-col">
       {/* Header & Metrics */}
-      <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-4 shrink-0">
+      <div className="stock-header bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-4 shrink-0">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-orange-500/10 text-orange-400 rounded-lg">
+            <div className="stock-title-mark p-2 rounded-lg">
               <BarChart3 className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-white">Stock Management & Movement Ledger</h2>
-              <p className="text-xs text-slate-400">
+              <h2 className="stock-title text-lg font-bold">Stock Management & Movement Ledger</h2>
+              <p className="stock-subtitle text-xs">
                 Track fireworks inventory levels, valuation, and every stock transaction
               </p>
             </div>

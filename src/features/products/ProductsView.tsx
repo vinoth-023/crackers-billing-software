@@ -242,15 +242,15 @@ export const ProductsView: React.FC = () => {
   return (
     <div id="products-view-root" className="p-4 sm:p-6 space-y-4 max-w-7xl mx-auto overflow-y-auto h-full flex flex-col">
       {/* Top Header */}
-      <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-3 shrink-0">
+      <div className="products-header bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-3 shrink-0">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-orange-500/10 text-orange-400 rounded-lg">
+            <div className="products-title-mark p-2 rounded-lg">
               <Boxes className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-white">Fireworks Catalog & Master List</h2>
-              <p className="text-xs text-slate-400">
+              <h2 className="products-title text-lg font-bold">Fireworks Catalog & Master List</h2>
+              <p className="products-subtitle text-xs">
                 Manage fireworks products, barcodes, rates, and minimum stock alert thresholds
               </p>
             </div>
@@ -259,7 +259,7 @@ export const ProductsView: React.FC = () => {
           <button
             id="btn-add-new-product"
             onClick={handleOpenAdd}
-            className="flex items-center gap-1.5 px-4 py-2 bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-orange-950 transition-colors"
+            className="products-add-button flex items-center gap-1.5 px-4 py-2 font-bold text-xs rounded-xl shadow-lg transition-colors"
           >
             <Plus className="w-4 h-4" />
             Add Cracker Product

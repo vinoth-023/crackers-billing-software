@@ -112,15 +112,15 @@ export const DashboardView: React.FC<Props> = ({ onNavigate, onOpenReceipt }) =>
   return (
     <div id="dashboard-view-root" className="h-full min-h-0 p-3 sm:p-4 lg:p-6 pb-20 md:pb-6 space-y-4 sm:space-y-6 max-w-7xl mx-auto overflow-y-auto overscroll-contain">
       {/* Top Banner / Quick Actions */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-gradient-to-r from-orange-950/70 via-slate-900 to-slate-900 border border-orange-500/20 p-5 rounded-2xl shadow-xl">
+      <div className="dashboard-hero flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-5 rounded-2xl shadow-xl">
         <div>
           <div className="flex items-center gap-2">
-            <span className="p-1.5 bg-orange-500/20 text-orange-400 rounded-lg">
+            <span className="dashboard-brand-mark p-1.5 rounded-lg">
               <Flame className="w-5 h-5" />
             </span>
-            <h2 className="text-xl font-black text-white tracking-tight">Fireworks Retail POS Terminal</h2>
+            <h2 className="dashboard-hero-title text-xl font-black tracking-tight">Fireworks Retail POS Terminal</h2>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="dashboard-hero-subtitle text-xs mt-1">
             Diwali season high-velocity billing • Tax-free retail invoicing • Real-time stock sync
           </p>
         </div>
@@ -129,7 +129,7 @@ export const DashboardView: React.FC<Props> = ({ onNavigate, onOpenReceipt }) =>
           <button
             id="dash-btn-billing"
             onClick={() => onNavigate && onNavigate('BILLING')}
-            className="flex items-center gap-2 px-4 py-2.5 bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-orange-950 transition-all scale-100 hover:scale-102"
+            className="dashboard-action-primary flex items-center gap-2 px-4 py-2.5 font-bold text-xs rounded-xl shadow-lg transition-all scale-100 hover:scale-102"
           >
             <Sparkles className="w-4 h-4 text-amber-300" />
             Start Billing (F9)
@@ -137,7 +137,7 @@ export const DashboardView: React.FC<Props> = ({ onNavigate, onOpenReceipt }) =>
           <button
             id="dash-btn-products"
             onClick={() => onNavigate && onNavigate('PRODUCTS')}
-            className="flex items-center gap-1.5 px-3 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl border border-slate-700 transition-colors"
+            className="dashboard-action-secondary flex items-center gap-1.5 px-3 py-2.5 text-xs font-semibold rounded-xl border transition-colors"
           >
             <PlusCircle className="w-4 h-4 text-orange-400" />
             Add Cracker
@@ -145,7 +145,7 @@ export const DashboardView: React.FC<Props> = ({ onNavigate, onOpenReceipt }) =>
           <button
             id="dash-btn-purchases"
             onClick={() => onNavigate && onNavigate('PURCHASES')}
-            className="flex items-center gap-1.5 px-3 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl border border-slate-700 transition-colors"
+            className="dashboard-action-secondary flex items-center gap-1.5 px-3 py-2.5 text-xs font-semibold rounded-xl border transition-colors"
           >
             <ShoppingBag className="w-4 h-4 text-emerald-400" />
             New Purchase
@@ -156,10 +156,10 @@ export const DashboardView: React.FC<Props> = ({ onNavigate, onOpenReceipt }) =>
       {/* Metrics Row */}
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Today's Sales */}
-        <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-sm">
+        <div className="dashboard-card bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-sm">
           <div className="flex items-center justify-between text-slate-400">
             <span className="text-xs font-semibold">Today's Sales</span>
-            <div className="p-2 bg-orange-500/10 text-orange-400 rounded-lg">
+            <div className="dashboard-metric-icon dashboard-metric-icon-sales p-2 rounded-lg">
               <IndianRupee className="w-4 h-4" />
             </div>
           </div>
@@ -173,7 +173,7 @@ export const DashboardView: React.FC<Props> = ({ onNavigate, onOpenReceipt }) =>
         </div>
 
         {/* Today's Net Profit */}
-        <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-sm">
+        <div className="dashboard-card bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-sm">
           <div className="flex items-center justify-between text-slate-400">
             <span className="text-xs font-semibold">Today's Net Profit</span>
             <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg">
@@ -190,7 +190,7 @@ export const DashboardView: React.FC<Props> = ({ onNavigate, onOpenReceipt }) =>
         </div>
 
         {/* Cash & UPI Collection */}
-        <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-sm">
+        <div className="dashboard-card bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-sm">
           <div className="flex items-center justify-between text-slate-400">
             <span className="text-xs font-semibold">Cash & Digital Coll.</span>
             <div className="p-2 bg-sky-500/10 text-sky-400 rounded-lg">
@@ -207,7 +207,7 @@ export const DashboardView: React.FC<Props> = ({ onNavigate, onOpenReceipt }) =>
         </div>
 
         {/* Credit / Due Sales */}
-        <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-sm">
+        <div className="dashboard-card bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-sm">
           <div className="flex items-center justify-between text-slate-400">
             <span className="text-xs font-semibold">Credit Sales (Due)</span>
             <div className="p-2 bg-amber-500/10 text-amber-400 rounded-lg">

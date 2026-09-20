@@ -127,7 +127,7 @@ export const Header: React.FC<Props> = ({
         )}
 
         <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-white shadow-sm shadow-orange-950 shrink-0">
+          <div className="header-brand-mark w-8 h-8 rounded-lg flex items-center justify-center text-white shadow-sm shrink-0">
             <Flame className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
           <div className="min-w-0">

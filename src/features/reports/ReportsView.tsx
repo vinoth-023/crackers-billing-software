@@ -161,15 +161,15 @@ export const ReportsView: React.FC = () => {
   return (
     <div id="reports-view-root" className="p-2.5 sm:p-4 lg:p-6 space-y-3 sm:space-y-4 max-w-7xl mx-auto overflow-y-auto h-full flex flex-col">
       {/* Header & Controls */}
-      <div className="bg-slate-900 border border-slate-800 p-3 sm:p-4 rounded-xl space-y-3 shrink-0">
+      <div className="reports-header bg-slate-900 border border-slate-800 p-3 sm:p-4 rounded-xl space-y-3 shrink-0">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-orange-500/10 text-orange-400 rounded-lg">
+            <div className="reports-title-mark p-2 rounded-lg">
               <FileSpreadsheet className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="text-base sm:text-lg font-bold text-white leading-tight">Business Analytics & Profit Reports</h2>
-              <p className="text-xs text-slate-400">Financial statements, inventory valuation, and customer credit aging</p>
+              <h2 className="reports-title text-base sm:text-lg font-bold leading-tight">Business Analytics & Profit Reports</h2>
+              <p className="reports-subtitle text-xs">Financial statements, inventory valuation, and customer credit aging</p>
             </div>
           </div>
 

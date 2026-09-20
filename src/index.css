@@ -232,6 +232,86 @@ body{background:#f5f6f8!important;color:#1e293b!important}
   main > div[id$="-view-root"] .fixed.inset-0 > * { max-width:100%!important; max-height:none!important; }
 }
 
+/* Dashboard visual polish: keep the hero and controls readable in the light POS theme. */
+#dashboard-view-root { color:#172033!important; }
+#dashboard-view-root .dashboard-hero {
+  background:linear-gradient(135deg,#1769aa 0%,#1d75b7 58%,#145b94 100%)!important;
+  border:1px solid #0f5c96!important;
+  color:#fff!important;
+}
+#dashboard-view-root .dashboard-brand-mark { background:rgba(255,255,255,.18)!important; color:#fff!important; }
+#dashboard-view-root .dashboard-hero-title { color:#fff!important; }
+#dashboard-view-root .dashboard-hero-subtitle { color:#dbeeff!important; }
+#dashboard-view-root .dashboard-action-primary {
+  background:#f97316!important; color:#fff!important; border:1px solid #fb923c!important;
+  box-shadow:0 4px 12px rgba(15,50,80,.24)!important;
+}
+#dashboard-view-root .dashboard-action-primary:hover { background:#ea580c!important; }
+#dashboard-view-root .dashboard-action-secondary {
+  background:#fff!important; color:#17324d!important; border-color:#c7d9e8!important;
+  box-shadow:0 2px 7px rgba(15,50,80,.12)!important;
+}
+#dashboard-view-root .dashboard-action-secondary:hover { background:#eef7ff!important; border-color:#7db5dc!important; }
+#dashboard-view-root .dashboard-card {
+  background:#fff!important; border-color:#dbe5ef!important; color:#172033!important;
+  box-shadow:0 2px 8px rgba(15,50,80,.05)!important;
+}
+#dashboard-view-root .dashboard-metric-icon-sales {
+  background:#e8f2fa!important;
+  color:#1769aa!important;
+}
+#dashboard-view-root .dashboard-card .text-white,
+#dashboard-view-root .dashboard-card .text-slate-100,
+#dashboard-view-root .dashboard-card .text-slate-200 { color:#172033!important; }
+#dashboard-view-root .dashboard-card .text-slate-300,
+#dashboard-view-root .dashboard-card .text-slate-400,
+#dashboard-view-root .dashboard-card .text-slate-500 { color:#526174!important; }
+#main-app-header .header-brand-mark {
+  background:linear-gradient(135deg,#1769aa,#0f5c96)!important;
+  color:#fff!important;
+  border:1px solid #0b4f82!important;
+}
+#products-view-root { color:#172033!important; }
+#products-view-root .products-header,
+#products-view-root > .flex-1 { background:#fff!important; border-color:#dbe5ef!important; color:#172033!important; }
+#products-view-root .products-title-mark { background:#1769aa!important; color:#fff!important; }
+#products-view-root .products-title { color:#172033!important; }
+#products-view-root .products-subtitle { color:#526174!important; }
+#products-view-root .products-add-button { background:#1769aa!important; color:#fff!important; border:1px solid #1769aa!important; }
+#products-view-root .products-add-button:hover { background:#12558b!important; }
+#stock-view-root { color:#172033!important; }
+#stock-view-root .stock-header,
+#stock-view-root > .flex-1 { background:#fff!important; border-color:#dbe5ef!important; color:#172033!important; }
+#stock-view-root .stock-title-mark { background:#1769aa!important; color:#fff!important; }
+#stock-view-root .stock-title { color:#172033!important; }
+#stock-view-root .stock-subtitle { color:#526174!important; }
+#reports-view-root { color:#172033!important; }
+#reports-view-root .reports-header,
+#reports-view-root > .flex-1 { background:#fff!important; border-color:#dbe5ef!important; color:#172033!important; }
+#reports-view-root .reports-title-mark { background:#1769aa!important; color:#fff!important; }
+#reports-view-root .reports-title { color:#172033!important; }
+#reports-view-root .reports-subtitle { color:#526174!important; }
+#settings-view-root .printer-mode-card { background:#fff!important; border-color:#dbe5ef!important; color:#172033!important; }
+#settings-view-root .printer-mode-card:hover { border-color:#7db5dc!important; background:#f8fbff!important; }
+#settings-view-root .printer-mode-title { color:#172033!important; }
+#settings-view-root .printer-mode-copy { color:#526174!important; }
+#settings-view-root .printer-mode-card[class*="bg-orange-950"] { background:#1769aa!important; border-color:#f97316!important; color:#fff!important; }
+#settings-view-root .printer-mode-card[class*="bg-orange-950"] .printer-mode-title { color:#fff!important; }
+#settings-view-root .printer-mode-card[class*="bg-orange-950"] .printer-mode-copy { color:#dbeeff!important; }
+#settings-view-root { color:#172033!important; }
+#settings-view-root .settings-title-mark { background:#1769aa!important; color:#fff!important; border:1px solid #0f5c96!important; }
+#settings-view-root [class*="bg-orange-600"] { background:#1769aa!important; color:#fff!important; }
+#settings-view-root [class*="bg-orange-600"]:hover { background:#12558b!important; color:#fff!important; }
+#settings-view-root [class*="bg-orange-950"]:not(.printer-mode-card) { background:#fff!important; border-color:#dbe5ef!important; color:#172033!important; }
+#settings-view-root [class*="bg-orange-950"]:not(.printer-mode-card) .text-white,
+#settings-view-root [class*="bg-orange-950"]:not(.printer-mode-card) .text-slate-100,
+#settings-view-root [class*="bg-orange-950"]:not(.printer-mode-card) .text-slate-200,
+#settings-view-root [class*="bg-orange-950"]:not(.printer-mode-card) .text-slate-300 { color:#172033!important; }
+#settings-view-root input,
+#settings-view-root select,
+#settings-view-root textarea { background:#fff!important; color:#172033!important; border-color:#cbd5e1!important; }
+#settings-view-root label { color:#526174!important; }
+
 /* Branch and Staff share the legacy admin class; keep them on the light POS
    surface at every viewport, not only on phones. */
 .admin-page { background:#f5f7fa!important; color:#172b45!important; }
@@ -345,3 +425,10 @@ body{background:#f5f6f8!important;color:#1e293b!important}
     flex:0 0 auto!important;
   }
 }
+#main-app-header .header-brand-mark { background:linear-gradient(135deg,#1769aa,#0f5c96)!important; color:#fff!important; }
+.data-row { width:100%; min-width:0; box-sizing:border-box; gap:12px; }
+.data-row b { display:none!important; }
+.data-row > div { min-width:0; flex:1; display:grid!important; gap:4px!important; }
+.data-row > div span { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.data-row > aside { flex:0 0 auto; display:flex!important; gap:7px!important; }
+.data-row > aside button { width:34px; height:34px; display:grid; place-items:center; padding:0!important; }

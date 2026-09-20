@@ -62,10 +62,11 @@ export const SettingsView: React.FC<{ initialTab?: 'FIREBASE'|'SHOP'|'PRINTER'|'
     return () => unsub();
   }, []);
 
-  const handleSaveSettings = (e?: React.FormEvent) => {
+  const handleSaveSettings = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     StorageService.saveSettings(settings);
     StorageService.updateBillingConfig(billingConfig);
+    await FirestoreSync.syncSettings(settings);
     FirestoreSync.syncBillingConfig(billingConfig).catch((err) => error(err?.message || 'Invoice settings sync failed'));
     success('Shop settings updated and synchronized successfully!');
   };
@@ -231,7 +232,7 @@ export const SettingsView: React.FC<{ initialTab?: 'FIREBASE'|'SHOP'|'PRINTER'|'
       <div className="bg-slate-900 border border-slate-800 p-4 rounded-2xl space-y-3 shrink-0">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-orange-500/10 text-orange-400 rounded-xl border border-orange-500/20 shrink-0">
+            <div className="settings-title-mark p-2.5 rounded-xl shrink-0">
               <Settings className="w-6 h-6" />
             </div>
             <div>
@@ -665,17 +666,17 @@ export const SettingsView: React.FC<{ initialTab?: 'FIREBASE'|'SHOP'|'PRINTER'|'
                   setSettings(upd);
                   StorageService.saveSettings(upd);
                 }}
-                className={`p-4 rounded-2xl border cursor-pointer transition-all ${
+                className={`printer-mode-card p-4 rounded-2xl border cursor-pointer transition-all ${
                   settings.printer.mode === 'CONNECTOR'
                     ? 'bg-orange-950/20 border-orange-500 ring-1 ring-orange-500'
                     : 'bg-slate-950 border-slate-800 hover:border-slate-700'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-bold text-white text-sm">Mode 1: Connector App</span>
+                  <span className="printer-mode-title font-bold text-sm">Mode 1: Connector App</span>
                   {settings.printer.mode === 'CONNECTOR' && <CheckCircle2 className="w-4 h-4 text-orange-400" />}
                 </div>
-                <p className="text-slate-400 text-[11px] leading-relaxed">
+                <p className="printer-mode-copy text-[11px] leading-relaxed">
                   Opens the Android Cloth Printer Connector using the <code>cloth-print://</code> bridge flow. It prints 80mm ESC/POS over Bluetooth Classic SPP.
                 </p>
                 <div className="mt-3 text-[10px] font-mono text-orange-300 bg-orange-950/50 p-1.5 rounded-md border border-orange-900/50 truncate">
@@ -690,17 +691,17 @@ export const SettingsView: React.FC<{ initialTab?: 'FIREBASE'|'SHOP'|'PRINTER'|'
                   setSettings(upd);
                   StorageService.saveSettings(upd);
                 }}
-                className={`p-4 rounded-2xl border cursor-pointer transition-all ${
+                className={`printer-mode-card p-4 rounded-2xl border cursor-pointer transition-all ${
                   settings.printer.mode === 'SERIAL'
                     ? 'bg-orange-950/20 border-orange-500 ring-1 ring-orange-500'
                     : 'bg-slate-950 border-slate-800 hover:border-slate-700'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-bold text-white text-sm">Mode 2: Web Serial (USB)</span>
+                  <span className="printer-mode-title font-bold text-sm">Mode 2: Web Serial (USB)</span>
                   {settings.printer.mode === 'SERIAL' && <CheckCircle2 className="w-4 h-4 text-orange-400" />}
                 </div>
-                <p className="text-slate-400 text-[11px] leading-relaxed">
+                <p className="printer-mode-copy text-[11px] leading-relaxed">
                   Direct browser USB/COM port connection using Chrome Web Serial API. Sends raw ESC/POS binary commands.
                 </p>
                 <div className="mt-3 text-[10px] font-mono text-sky-300 bg-sky-950/50 p-1.5 rounded-md border border-sky-900/50">
@@ -715,17 +716,17 @@ export const SettingsView: React.FC<{ initialTab?: 'FIREBASE'|'SHOP'|'PRINTER'|'
                   setSettings(upd);
                   StorageService.saveSettings(upd);
                 }}
-                className={`p-4 rounded-2xl border cursor-pointer transition-all ${
+                className={`printer-mode-card p-4 rounded-2xl border cursor-pointer transition-all ${
                   settings.printer.mode === 'NO_PRINTER'
                     ? 'bg-orange-950/20 border-orange-500 ring-1 ring-orange-500'
                     : 'bg-slate-950 border-slate-800 hover:border-slate-700'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-bold text-white text-sm">Mode 3: PDF / WhatsApp</span>
+                  <span className="printer-mode-title font-bold text-sm">Mode 3: PDF / WhatsApp</span>
                   {settings.printer.mode === 'NO_PRINTER' && <CheckCircle2 className="w-4 h-4 text-orange-400" />}
                 </div>
-                <p className="text-slate-400 text-[11px] leading-relaxed">
+                <p className="printer-mode-copy text-[11px] leading-relaxed">
                   Standard Browser Print Dialog (Save as PDF) + 1-Tap WhatsApp bill dispatch. No hardware needed.
                 </p>
                 <div className="mt-3 text-[10px] font-mono text-emerald-300 bg-emerald-950/50 p-1.5 rounded-md border border-emerald-900/50">
